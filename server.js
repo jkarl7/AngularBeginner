@@ -28,5 +28,6 @@ let server = app.listen(process.env.PORT || 8080, function () {
  *   PS: it's just an example, not mandatory
  */
 app.get("/api/status", function (req, res) {
+  console.log("Base url: " + req.baseUrl);
   res.status(200).json({ status: "UP" });
 });

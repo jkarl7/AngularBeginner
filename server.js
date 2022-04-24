@@ -28,6 +28,7 @@ let server = app.listen(process.env.PORT || 8080, function () {
  *   PS: it's just an example, not mandatory
  */
 app.get("/api/status", function (req, res) {
+  console.log("ORIGIN: " + req.headers['origin']);
   if (req.headers['origin'] !== 'https://warlords-leek2.ondigitalocean.app') {
     res.sendStatus(403);
   } else {

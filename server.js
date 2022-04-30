@@ -29,13 +29,13 @@ let server = app.listen(process.env.PORT || 8080, function () {
  */
 app.get("/api/status", function (req, res) {
   console.log("ORIGIN: " + req.headers['origin']);
-  if (req.headers['origin'] !== 'https://warlords-leek2.ondigitalocean.app') {
-    res.sendStatus(403);
-  } else {
+ // if (req.headers['origin'] !== 'https://warlords-leek2.ondigitalocean.app') {
+ //   res.sendStatus(403);
+ // } else {
     console.log("Base url: " + req.baseUrl);
     console.log("URL : " + req.url);
     res.status(200).json({ status: "UP" });
-  }
+ // }
  // console.log("Base url: " + req.baseUrl);
  // console.log("URL : " + req.url);
 //  res.status(200).json({ status: "UP" });

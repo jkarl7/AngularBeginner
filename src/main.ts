@@ -6,7 +6,6 @@ import { environment } from './environments/environment';
 
 if (environment.production) {
   enableProdMode();
-  console.log('IS PRODUCTION: ' + environment.production);
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)
